@@ -26,17 +26,17 @@
 
         // Example code for a bot command:
         bot.commands.baconCommand = {
-            command: 'bacon',  // The command to be called. With the standard command literal this would be: !bacon
-            rank: 'user', // Minimum user permission to use the command
-            type: 'exact', // Specify if it can accept variables or not (if so, these have to be handled yourself through the chat.message
-              functionality: function (chat, cmd) {
-                if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-                if (!bot.commands.executable(this.rank, chat)) return void (0);
-                else {
-                  API.sendChat("/me Bacon!!!");
-                }
-              }
-            };
+          command: 'bacon',  // The command to be called. With the standard command literal this would be: !bacon
+          rank: 'user', // Minimum user permission to use the command
+          type: 'exact', // Specify if it can accept variables or not (if so, these have to be handled yourself through the chat.message
+          functionality: function (chat, cmd) {
+            if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+            if (!bot.commands.executable(this.rank, chat)) return void (0);
+            else {
+              API.sendChat("/me Bacon!!!");
+            }
+          }
+        };
 
         // Load the chat package again to account for any changes
         bot.loadChat();
@@ -46,10 +46,10 @@
     //Change the bots default settings and make sure they are loaded on launch
 
     localStorage.setItem("basicBotsettings", JSON.stringify({
-      botName: "bTBot",
+      botName: "basicBot",
       language: "english",
       chatLink: "https://raw.githubusercontent.com/Lacquan/bT/master/lang/en.json",
-      scriptLink: "https://raw.githubusercontent.com/Lacquan/bT/master/ECMBot.js",
+      scriptLink: "https://raw.githubusercontent.com/Lacquan/bT/master/bTBot.js",
       roomLock: false, // Requires an extension to re-load the script
       startupCap: 200, // 1-200
       startupVolume: 0, // 0-100
@@ -72,7 +72,7 @@
       voteSkipLimit: 10,
       historySkip: false,
       timeGuard: true,
-      maximumSongLength: 120,
+      maximumSongLength: 8,
       autodisable: true,
       commandCooldown: 30,
       usercommandsEnabled: true,
@@ -113,6 +113,6 @@
     }));
 
     // Start the bot and extend it when it has loaded.
-    $.getScript("https://raw.githubusercontent.com/Lacquan/bT/master/ECMBot.js", extend);
+    $.getScript("https://raw.githubusercontent.com/Lacquan/bT/master/bTBot.js", extend);
 
 }).call(this);
