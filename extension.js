@@ -46,7 +46,7 @@
     //Change the bots default settings and make sure they are loaded on launch
 
     localStorage.setItem("basicBotsettings", JSON.stringify({
-      botName: "basicBot",
+      botName: "bTBot",
       language: "english",
       chatLink: "https://raw.githubusercontent.com/Lacquan/bT/master/lang/en.json",
       scriptLink: "https://raw.githubusercontent.com/Lacquan/bT/master/bTBot.js",
@@ -98,8 +98,8 @@
       rulesLink: "http://forum.bttdm.com/index.php?topic=49100.msg376074#msg376074",
       themeLink: null,
       fbLink: "https://www.facebook.com/bttdm.samp",
-      twitterLink: "https://twitter.com/blackturbossamp",
-      forum: "http://forum.bttdm.com",
+      youtubeLink: null,
+	  forum: "http://forum.bttdm.com",
       website: "http://bttdm.com",
       intervalMessages: [],
       messageInterval: 5,
