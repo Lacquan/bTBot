@@ -99,7 +99,7 @@
       themeLink: null,
       fbLink: "https://www.facebook.com/bttdm.samp",
       youtubeLink: null,
-	  forum: "http://forum.bttdm.com",
+      forum: "http://forum.bttdm.com",
       website: "http://bttdm.com",
       intervalMessages: [],
       messageInterval: 5,
